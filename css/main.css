@@ -1,0 +1,156 @@
+* {
+    position: relative;
+    font-family: 'Permanent Marker', '微軟正黑體',cursive;
+    user-select: none;
+}
+html, body {
+    height: 100%;
+}
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    z-index: 9;
+}
+    .bg span {
+        font-size: 20rem;
+        letter-spacing: 1.5rem;
+        position: absolute;
+        bottom: 1rem;
+        left: 140%;
+        transform: translateX(-50%);
+        transition: all ease-out .3s;
+        white-space: nowrap;
+    }
+
+.header {
+    position: relative;
+    height: 100%;
+    background-image: url(../images/liu_0.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.info {
+    height: 100%;
+}
+    .info .container {
+        height: 100%;
+    }
+    .info .container > .infoContent {
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        white-space: nowrap;
+    }
+    .info .container .infoContent:nth-child(2) {
+        top: 30%;
+    }
+    .info .container .infoContent:nth-child(3) {
+        top: 40%;
+    }
+    .info .container .rb:nth-child(2)::after {
+        animation-delay: .3s;
+    }
+    .info .container .rb:nth-child(3)::after {
+        animation-delay: .6s;
+    }
+    .info .container .infoContent span {
+        opacity: 0;
+    }
+    .info > .infoImg {
+        position: absolute;
+        background-image: url(../images/liu_2.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: top center;
+        width: 30%;
+        height: 60%;
+        right: 10%;
+        top: 10%;
+        opacity: .9;
+    }
+
+
+.rb {
+    overflow: hidden;
+}
+    .rb span {
+        animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+    }
+    .rb::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #81CBC8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: slideBox 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+    }
+@keyframes slideBox {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(101%);
+        animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+}
+@keyframes show {
+    0%, 50% {
+        opacity: 0;
+    }
+    51%, 100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .header {
+        height: 70%;
+    }
+    .info .container > .infoContent {
+        font-size: 2rem;
+        left: 1rem;
+        top: 1rem;
+    }
+    .info .container > .infoContent:nth-child(2) {
+        top: 5rem;
+    }
+    .info .container > .infoContent:nth-child(3) {
+        top: 9rem;
+    }
+    .info > .infoImg {
+        top: 35%;
+        width: 100%;
+        height: 60%;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .bg span {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (min-width: 1281px) {
+    .info .container > .infoContent {
+        left: 15%;
+    }
+    .info > .infoImg {
+        width: 40%;
+        height: 80%;
+    }
+}
