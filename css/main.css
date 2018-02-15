@@ -30,7 +30,7 @@ html, body {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: 5rem;
 }
 
@@ -45,7 +45,7 @@ html, body {
         display: inline-block;
         position: absolute;
         top: 20%;
-        left: 10%;
+        left: 15%;
         font-size: 1.5rem;
         padding: 1rem 2rem;
         white-space: nowrap;
@@ -64,13 +64,14 @@ html, body {
     }
     .info .container .infoContent span {
         opacity: 0;
+        letter-spacing: .3rem;
     }
     .info > .infoImg {
         position: absolute;
-        width: 40%;
-        height: 80%;
-        right: 10%;
-        top: 10%;
+        width: 30%;
+        height: 90%;
+        right: 20%;
+        top: 5%;
         z-index: 2;
     }
         .info > .infoImg::before {
@@ -159,16 +160,25 @@ html, body {
 
 @media screen and (max-width: 1281px) {
     .bg span {
-        font-size: 10rem;
+        font-size: 15rem;
+        left: 150%;
+    }
+    .info .container > .infoContent {
+        left: 5%;
+    }
+    .info > .infoImg {
+        top: 10%;
+        right: 10%;
+        width: 40%;
+        height: 80%;
     }
 }
 
 @media screen and (min-width: 1281px) {
     .info .container > .infoContent {
-        left: 15%;
+        left: 15%
     }
     .info > .infoImg {
-        top: 0;
-        height: 100%;
+
     }
 }
