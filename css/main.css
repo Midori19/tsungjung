@@ -174,7 +174,7 @@ html, body {
             background-color: #FF6889;
             margin-top: -50px;
             margin-left: -300px;
-            transition: right 2s;
+            transition: left 2s;
             opacity: 0.5;
             animation: drift 3000ms infinite linear;
         }
@@ -183,7 +183,7 @@ html, body {
                 animation: drift 5000ms infinite linear;
                 opacity: 0.7;
             }
-            .portfolio > .waveThree {
+            .portfolio .wave.waveThree {
                 animation: drift 3500ms infinite linear;
             }
     .portfolio .works {
