@@ -26,7 +26,7 @@ html, body {
 .header {
     position: relative;
     height: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     overflow: hidden;
     background-image: url(../images/liu_0.jpg);
     background-position: center;
@@ -68,7 +68,7 @@ html, body {
 
 .info {
     height: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
 }
     .info .container {
         height: 100%;
@@ -128,24 +128,63 @@ html, body {
             background-size: cover;
         }
 
-
-.rb {
-    overflow: hidden;
-}
-    .rb span {
-        animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+    .rb {
+        overflow: hidden;
     }
-    .rb::after {
-        content: "";
+        .rb span {
+            animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .rb::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #81CBC8;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: slideBox 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+
+.portfolio {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: table;
+    margin-bottom: 10rem;
+}
+    .portfolio::after {
+        content: '';
+        clear: both;
+    }
+    .portfolio .works {
+        width: 33%;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-right: 0.333333%;
+        margin-bottom: 0.3rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .portfolio .works .worksInner {
+        padding-top: 50%;
+        padding-bottom: 50%;
+        display: block;
         width: 100%;
         height: 100%;
-        display: block;
-        background: #81CBC8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: slideBox 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+        background-image: url(../images/liu_2.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transform: scale(1);
     }
+    .portfolio .works .worksInner:hover {
+        transform: scale(1.2);
+    }
+
 @keyframes slideBox {
     0% {
         transform: translateX(-100%);
@@ -220,7 +259,6 @@ html, body {
         width: 40%;
         height: 80%;
     }
-
 }
 
 @media screen and (min-width: 1281px) {
