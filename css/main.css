@@ -258,9 +258,8 @@ html, body {
 }
 
 @media screen and (max-width: 765px) {
-    .portfolio .work {
-        margin-right: 0.2rem;
-        margin-bottom: 0.2rem;
+    .portfolio .works .work {
+        width: 100%;
     }
 }
 @media screen and (max-width: 981px) {
@@ -308,6 +307,11 @@ html, body {
     }
     .portfolio .waveBox .wave {
         margin-left: -200px;
+    }
+    .portfolio .work {
+        width: 47.5%;
+        margin-right: 0.5%;
+        margin-left: 0.5%;
     }
 }
 
