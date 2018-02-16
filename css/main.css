@@ -26,13 +26,45 @@ html, body {
 .header {
     position: relative;
     height: 100%;
+    margin-bottom: 5rem;
+    overflow: hidden;
     background-image: url(../images/liu_0.jpg);
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
     opacity: 0.9;
-    margin-bottom: 5rem;
 }
+    .header .slideImg {
+        float: left;
+        font-size: 0;
+        width: 33.333333%;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-image: url(../images/liu_0.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        transform: translateX(30%);
+        animation: headSlide 2000ms 1 linear forwards;
+    }
+    .header .slideImg::after {
+        content: "";
+        clear: both;
+    }
+    .header .slideImg.headOne {
+        background-position: 11.3%;
+    }
+    .header .slideImg.headTwo {
+        transform: translateX(20%);
+        animation: headSlide 1800ms 1 linear forwards;
+    }
+    .header .slideImg.headThree {
+        transform: translateX(10%);
+        background-position: 88.8%;
+        animation: headSlide 1600ms 1 linear forwards;
+    }
 
 .info {
     height: 100%;
@@ -134,7 +166,16 @@ html, body {
         opacity: 1;
     }
 }
-
+/* header slide */
+@keyframes headSlide {
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
 @media screen and (max-width: 981px) {
     .header {
         height: 70%;
@@ -163,6 +204,13 @@ html, body {
         font-size: 15rem;
         left: 150%;
     }
+    .header .slideImg.headOne {
+        background-position: 25.3%;
+    }
+    .header .slideImg.headThree {
+        transform: translateX(10%);
+        background-position: 74.5%;
+    }
     .info .container > .infoContent {
         left: 5%;
     }
@@ -172,6 +220,7 @@ html, body {
         width: 40%;
         height: 80%;
     }
+
 }
 
 @media screen and (min-width: 1281px) {
