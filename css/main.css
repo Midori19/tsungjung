@@ -147,17 +147,50 @@ html, body {
         }
 
 .portfolio {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    margin: auto;
     display: table;
     margin-bottom: 10rem;
+    position: relative;
 }
     .portfolio::after {
         content: '';
         clear: both;
     }
+    .portfolio .waveBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+        .portfolio .waveBox .wave {
+            position: absolute;
+            left: 0;
+            width: 110vw;
+            height: 110vw;
+            border-radius: 40%;
+            background-color: #FF6889;
+            margin-top: -50px;
+            margin-left: -300px;
+            transition: right 2s;
+            opacity: 0.5;
+            animation: drift 3000ms infinite linear;
+        }
+            .portfolio .wave.waveTwo {
+                background-color: #FAE3D9;
+                animation: drift 5000ms infinite linear;
+                opacity: 0.7;
+            }
+            .portfolio > .waveThree {
+                animation: drift 3500ms infinite linear;
+            }
     .portfolio .works {
+        width: 80%;
+        margin: auto;
+    }
+    .portfolio .work {
         width: 32.5%;
         float: left;
         -webkit-box-sizing: border-box;
@@ -168,22 +201,22 @@ html, body {
         overflow: hidden;
         cursor: pointer;
     }
-    .portfolio .works .worksInner {
-        padding-top: 50%;
-        padding-bottom: 50%;
-        display: block;
-        width: 100%;
-        height: 100%;
-        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
-        background-image: url(../images/liu_2.jpg);
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        transform: scale(1);
-    }
-    .portfolio .works .worksInner:hover {
-        transform: scale(1.2);
-    }
+        .portfolio .work .workInner {
+            padding-top: 50%;
+            padding-bottom: 50%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+            background-image: url(../images/liu_2.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+        }
+        .portfolio .work .workInner:hover {
+            transform: scale(1.2);
+        }
 
 @keyframes slideBox {
     0% {
@@ -215,6 +248,21 @@ html, body {
         transform: translateX(0);
     }
 }
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .portfolio .work {
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+}
 @media screen and (max-width: 981px) {
     .header {
         height: 70%;
@@ -237,7 +285,6 @@ html, body {
         right: 0;
     }
 }
-
 @media screen and (max-width: 1281px) {
     .bg span {
         font-size: 15rem;
@@ -259,13 +306,13 @@ html, body {
         width: 40%;
         height: 80%;
     }
+    .portfolio .waveBox .wave {
+        margin-right: -200px;
+    }
 }
 
 @media screen and (min-width: 1281px) {
     .info .container > .infoContent {
         left: 15%
-    }
-    .info > .infoImg {
-
     }
 }
