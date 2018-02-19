@@ -1,4 +1,9 @@
 $(function() {
+    let winW = $(window).width()
+    if (winW < 765) {
+        $('.portfolio .work').removeClass('noneMB')
+    }
+
     $(window).scroll(function() {
         let winH = $(window).height()
         let winScroll = $(window).scrollTop()
@@ -10,4 +15,11 @@ $(function() {
             $('.infoContent').addClass('rb')
         }
     })
+
+    function addWorks() {
+        for (let i = 0; i < 9; i++) {
+            let workHtml = '<div class="work"><div class="workInner_' + i + '"></div></div>'
+            $('.works').append(workHtml)
+        }
+    }
 })
