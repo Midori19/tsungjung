@@ -16,10 +16,15 @@ $(function() {
         }
     })
 
+    // 在 works 下面增加 work 類別
     function addWorks() {
-        for (let i = 0; i < 9; i++) {
-            let workHtml = '<div class="work"><div class="workInner_' + i + '"></div></div>'
+        for (let i = 1; i <= 9; i++) {
+            let workHtml = '<div class="work"><div class="workInner" style="background-image: url(images/liu_' + i + '.jpg);"></div></div>'
+            if (i >= 7) {
+                workHtml = '<div class="work noneMB"><div class="workInner" style="background-image: url(images/liu_' + i + '.jpg);"></div></div>'
+            }
             $('.works').append(workHtml)
         }
     }
+    addWorks()
 })
