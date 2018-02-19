@@ -213,10 +213,23 @@ html, body {
         .portfolio .work .workInner:hover {
             transform: scale(1.2);
         }
+        .portfolio .work .workInner_0, .portfolio .work .workInner_1, .portfolio .work .workInner_2 {
+            background-position: left;
+        }
         /* 取消 margin-bottom */
         .portfolio .work.noneMB {
             margin-bottom: 0;
         }
+
+.footer {
+    background-image: url(../images/liu_10.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 0.9;
+}
 
 @keyframes slideBox {
     0% {
