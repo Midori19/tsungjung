@@ -1,6 +1,6 @@
 * {
     position: relative;
-    font-family: 'Permanent Marker', '微軟正黑體',cursive;
+    font-family: 'Comfortaa', 'Fredericka the Great', '微軟正黑體';
     user-select: none;
 }
 html, body {
@@ -21,6 +21,12 @@ html, body {
         transition: all ease-out .3s;
         white-space: nowrap;
         color: rgba(0,0,0,.7);
+    }
+    .bg .windowshow {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 2rem;
     }
 
 .header {
@@ -100,7 +106,7 @@ html, body {
         height: 90%;
         left: 20%;
         top: 5%;
-        opacity: 0.8;
+        opacity: 0.95;
         /*z-index: 2;*/
     }
         .info > .infoImg::before {
@@ -225,7 +231,7 @@ html, body {
 .footer {
     background-image: url(../images/liu_10.jpg);
     width: 100%;
-    height: 70%;
+    height: 100%;
     /*background-position: center;*/
     -webkit-background-size: cover;
     background-size: cover;
@@ -239,7 +245,15 @@ html, body {
     }
     .footer .footerWrap div span {
         color: rgba(255,255,255,0.8);
-        font-size: 2rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+    .footer .footerWrap .email {
+        margin-top: 1rem;
+    }
+    .footer .footerWrap .email span{
+
+        font-size: 1rem;
     }
     .footer .footerLink {
         margin-top: 1rem;
@@ -247,15 +261,18 @@ html, body {
     .footer .footerLink a {
         position: absolute;
         color: rgba(255,255,255,0.8);
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 1rem;
         transition: all ease-out 0.1s;
+    }
+    .footer .footerLink i {
+
     }
     .footer .footerLink .aOne {
         transform: translateX(-100%);
     }
         .footer .footerLink a:hover {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
 @keyframes slideBox {
@@ -299,8 +316,9 @@ html, body {
 
 @media screen and (max-width: 1281px) {
     .bg span {
-        font-size: 15rem;
-        left: 150%;
+        font-size: 40rem;
+        bottom: -25%;
+        left: 200%;
     }
     .header .slideImg.headOne {
         background-position: 14.7%;
