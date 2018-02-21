@@ -1,6 +1,6 @@
 * {
     position: relative;
-    font-family: 'Comfortaa', 'Fredericka the Great', '微軟正黑體';
+    font-family: 'Paytone One', 'Comfortaa', 'Fredericka the Great', '微軟正黑體';
     user-select: none;
 }
 html, body {
@@ -13,6 +13,7 @@ html, body {
 }
     .bg span {
         font-size: 20rem;
+        /*font-weight: 900;*/
         letter-spacing: 2rem;
         position: absolute;
         bottom: 1rem;
@@ -246,6 +247,7 @@ html, body {
     .footer .footerWrap div span {
         color: rgba(255,255,255,0.8);
         font-size: 1.5rem;
+        font-family: 'Comfortaa';
         letter-spacing: 0.2rem;
     }
     .footer .footerWrap .email {
@@ -262,17 +264,21 @@ html, body {
         position: absolute;
         color: rgba(255,255,255,0.8);
         font-size: 2rem;
-        padding: 1rem;
+        padding: 2rem;
         transition: all ease-out 0.1s;
     }
     .footer .footerLink i {
-
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     .footer .footerLink .aOne {
         transform: translateX(-100%);
     }
         .footer .footerLink a:hover {
             font-size: 2.5rem;
+            color: #e29eb7;
         }
 
 @keyframes slideBox {
@@ -318,7 +324,7 @@ html, body {
     .bg span {
         font-size: 40rem;
         bottom: -25%;
-        left: 200%;
+        left: 300%;
     }
     .header .slideImg.headOne {
         background-position: 14.7%;
