@@ -120,33 +120,12 @@ html, body {
     }
     .info > .infoImg {
         position: absolute;
-<<<<<<< HEAD
         top: 0;
         width: 25%;
         height: 100%;
         left: 20%;
-=======
-        width: 30%;
-        height: 90%;
-        left: 20%;
-        top: 5%;
->>>>>>> parent of 010a629... del after
         opacity: 0.95;
-        /*z-index: 2;*/
     }
-        .info > .infoImg::before {
-            content: "";
-            display: block;
-            height: 100%;
-            width: 100%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            position: absolute;
-            bottom: -2rem;
-            right: -2rem;
-            border: solid 5px #81CBC8;
-        }
         .info > .infoImg .img {
             background-image: url(../images/liu_1.jpg);
             width: 100%;
@@ -384,15 +363,8 @@ html, body {
         left: 50%;
     }
     .info > .infoImg {
-<<<<<<< HEAD
         width: 25%;
         height: 100%;
-=======
-        top: 10%;
-        left: 10%;
-        width: 40%;
-        height: 80%;
->>>>>>> parent of 010a629... del after
     }
     .portfolio .waveBox .wave {
         margin-left: -200px;
