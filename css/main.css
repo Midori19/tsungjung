@@ -12,16 +12,16 @@ html, body {
     height: 100%;
 }
     .bg span {
-        font-size: 20rem;
+        font-size: 52rem;
         /*font-weight: 900;*/
         letter-spacing: 2rem;
         position: absolute;
-        bottom: 1rem;
-        left: 140%;
+        bottom: -13rem;
+        left: 340%;
         transform: translateX(-50%);
         transition: all ease-out .3s;
         white-space: nowrap;
-        color: rgba(0,0,0,.7);
+        color: rgba(0,0,0,0.7);
     }
     .bg .windowshow {
         position: absolute;
@@ -37,7 +37,7 @@ html, body {
     overflow: hidden;
     background-image: url(../images/liu_9.jpg);
     background-position: center;
-    opacity: 0.9;
+    opacity: 0.98;
 }
     .header .slideImg {
         float: left;
@@ -92,14 +92,14 @@ html, body {
         top: 40%;
     }
     .info .container .rb:nth-child(2)::after {
-        animation-delay: .3s;
+        animation-delay: 0.3s;
     }
     .info .container .rb:nth-child(3)::after {
-        animation-delay: .6s;
+        animation-delay: 0.6s;
     }
     .info .container .infoContent span {
         opacity: 0;
-        letter-spacing: .3rem;
+        letter-spacing: 0.3rem;
     }
     .info > .infoImg {
         position: absolute;
@@ -137,6 +137,9 @@ html, body {
     }
         .rb span {
             animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .info .container .infoContent.rb:nth-child(2) span {
+            animation: show 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .rb::after {
             content: "";
@@ -195,7 +198,7 @@ html, body {
         margin: auto;
     }
     .portfolio .work {
-        width: 32.5%;
+        width: 24%;
         float: left;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -324,7 +327,7 @@ html, body {
     .bg span {
         font-size: 40rem;
         bottom: -25%;
-        left: 300%;
+        left: 315%;
     }
     .header .slideImg.headOne {
         background-position: 14.7%;
@@ -345,9 +348,9 @@ html, body {
         margin-left: -200px;
     }
     .portfolio .work {
-        width: 32%;
-        margin-right: 0.5%;
-        margin-left: 0.5%;
+        width: 24%;
+        /*margin-right: 0.5%;*/
+        /*margin-left: 0.5%;*/
     }
 }
 @media screen and (max-width: 981px) {
