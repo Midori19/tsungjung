@@ -413,37 +413,10 @@ html, body {
     }
 }
 @media screen and (max-width: 981px) {
-/*    .header {
-        height: 70%;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
     .header > .slideImg {
         -webkit-background-size: cover;
         background-size: cover;
     }
-    .header .slideImg.headOne {
-        background-position: -8.4%;
-    }
-    .header .slideImg.headThree {
-        background-position: 108.4%;
-    }
-    .info .container > .infoContent {
-        font-size: 2rem;
-        right: 1rem;
-        top: 1rem;
-    }
-    .info .container > .infoContent:nth-child(2) {
-        top: 5rem;
-    }
-    .info .container > .infoContent:nth-child(3) {
-        top: 9rem;
-    }
-    .info > .infoImg {
-        top: 35%;
-        width: 80%;
-        height: 70%;
-    }*/
 }
 @media screen and (max-width: 765px) {
     .bg span {

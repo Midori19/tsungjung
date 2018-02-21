@@ -14,6 +14,10 @@ $(function() {
         if (winScroll > $('.info').offset().top - 300) {
             $('.infoContent').addClass('rb')
         }
+
+        // debug
+        $('.bg .windowshow').text($(window).width())
+        // debug end
     })
 
     // 在 works 下面增加 work 類別
@@ -27,7 +31,4 @@ $(function() {
         }
     }
     addWorks()
-
-    // debug
-    $('.bg .windowshow').text($(window).width())
 })
