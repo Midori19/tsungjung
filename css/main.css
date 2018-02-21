@@ -13,7 +13,6 @@ html, body {
 }
     .bg span {
         font-size: 52rem;
-        /*font-weight: 900;*/
         letter-spacing: 2rem;
         position: absolute;
         bottom: -13rem;
@@ -38,8 +37,6 @@ html, body {
     background-image: url(../images/liu_9.jpg);
     background-position: center;
     opacity: 0.98;
-    -webkit-background-size: cover;
-    background-size: cover;
     background-attachment: fixed;
 }
     .header .slideImg {
@@ -248,8 +245,23 @@ html, body {
         .portfolio .work .workInner:hover {
             transform: scale(1.2);
         }
-        .portfolio .work .workInner_0, .portfolio .work .workInner_1, .portfolio .work .workInner_2 {
-            /*background-position: left;*/
+        .portfolio .work .workInner_0 {
+            background-position: right;
+        }
+        .portfolio .work .workInner_1 {
+            background-position: 40%;
+        }
+        .portfolio .work .workInner_2 {
+            background-position: 90%;
+        }
+        .portfolio .work .workInner_3 {
+            background-position: 20%;
+        }
+        .portfolio .work .workInner_4, .portfolio .work .workInner_5, .portfolio .work .workInner_6 {
+            background-position: left;
+        }
+        .portfolio .work .workInner_11 {
+            background-position: top;
         }
         /* 取消 margin-bottom */
         .portfolio .work.noneMB {
@@ -353,6 +365,10 @@ html, body {
         bottom: -25%;
         left: 315%;
     }
+    .header {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
     .header .slideImg.headOne {
         background-position: 14.7%;
     }
@@ -371,8 +387,8 @@ html, body {
     }
     .portfolio .work {
         width: 24%;
-        /*margin-right: 0.5%;*/
-        /*margin-left: 0.5%;*/
+        margin-right: 0.5%;
+        margin-left: 0.5%;
     }
     /* 預設，上面要改 */
     .portfolio .work .workInner_0 {
@@ -395,7 +411,7 @@ html, body {
     }
 }
 @media screen and (max-width: 981px) {
-    .header {
+/*    .header {
         height: 70%;
         -webkit-background-size: cover;
         background-size: cover;
@@ -425,7 +441,7 @@ html, body {
         top: 35%;
         width: 80%;
         height: 70%;
-    }
+    }*/
 }
 @media screen and (max-width: 765px) {
     .bg span {
