@@ -27,4 +27,7 @@ $(function() {
         }
     }
     addWorks()
+
+    // debug
+    $('.bg .windowshow').text($(window).width())
 })
