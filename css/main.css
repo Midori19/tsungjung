@@ -21,7 +21,7 @@ html, body {
         transform: translateX(-50%);
         transition: all ease-out .3s;
         white-space: nowrap;
-        color: #E29EB7;
+        color: rgba(0,0,0,0.7);
     }
     .bg .windowshow {
         position: absolute;
@@ -38,9 +38,6 @@ html, body {
     background-image: url(../images/liu_9.jpg);
     background-position: center;
     opacity: 0.98;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
 }
     .header .slideImg {
         float: left;
@@ -54,8 +51,6 @@ html, body {
         background-position: center center;
         transform: translateX(30%);
         animation: headSlide 2000ms 1 linear forwards;
-        /*-webkit-background-size: cover;*/
-        /*background-size: cover;*/
     }
     .header .slideImg::after {
         content: "";
@@ -84,23 +79,17 @@ html, body {
     .info .container > .infoContent {
         display: inline-block;
         position: absolute;
-        top: 32%;
-        left: 50%;
+        top: 20%;
+        right: 15%;
         font-size: 1.5rem;
-        padding: 0.5rem 2rem;
+        padding: 1rem 2rem;
         white-space: nowrap;
     }
     .info .container .infoContent:nth-child(2) {
-        top: 39%;
+        top: 30%;
     }
     .info .container .infoContent:nth-child(3) {
-        top: 46%;
-    }
-    .info .container .infoContent:nth-child(4) {
-        top: 53%;
-    }
-    .info .container .infoContent:nth-child(5) {
-        top: 60%;
+        top: 40%;
     }
     .info .container .rb:nth-child(2)::after {
         animation-delay: 0.3s;
@@ -108,22 +97,15 @@ html, body {
     .info .container .rb:nth-child(3)::after {
         animation-delay: 0.6s;
     }
-    .info .container .rb:nth-child(4)::after {
-        animation-delay: 0.9s;
-    }
-    .info .container .rb:nth-child(5)::after {
-        animation-delay: 1.2s;
-    }
     .info .container .infoContent span {
         opacity: 0;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.3rem;
     }
     .info > .infoImg {
         position: absolute;
-        top: 0;
         width: 25%;
         height: 100%;
-        left: 20%;
+        /*left: 20%;*/
         opacity: 0.95;
     }
         .info > .infoImg .img {
@@ -144,38 +126,17 @@ html, body {
         .info .container .infoContent.rb:nth-child(2) span {
             animation: show 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
-        .info .container .infoContent.rb:nth-child(3) span {
-            animation: show 2.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
-        }
-        .info .container .infoContent.rb:nth-child(4) span {
-            animation: show 3.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
-        }
-        .info .container .infoContent.rb:nth-child(5) span {
-            animation: show 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
-        }
         .rb::after {
             content: "";
             width: 100%;
             height: 100%;
             display: block;
-            background: #DD3742;
+            background: #81CBC8;
             position: absolute;
             top: 0;
             left: 0;
             animation: slideBox 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
-
-.art {
-    margin-bottom: 10rem;
-    width: 100%;
-}
-    .art .artContent {
-        position: relative;
-        margin: auto;        
-        width: 30%;
-        font-weight: 900;
-        text-align: center;
-    }
 
 .portfolio {
     width: 100%;
@@ -249,7 +210,7 @@ html, body {
             transform: scale(1.2);
         }
         .portfolio .work .workInner_0, .portfolio .work .workInner_1, .portfolio .work .workInner_2 {
-            /*background-position: left;*/
+            background-position: left;
         }
         /* 取消 margin-bottom */
         .portfolio .work.noneMB {
@@ -305,7 +266,7 @@ html, body {
     }
         .footer .footerLink a:hover {
             font-size: 2.5rem;
-            color: #E29EB7;
+            color: #e29eb7;
         }
 
 @keyframes slideBox {
@@ -360,9 +321,11 @@ html, body {
         background-position: 84.7%;
     }
     .info .container > .infoContent {
-        left: 50%;
+        right: 5%;
     }
     .info > .infoImg {
+        /*top: 10%;*/
+        /*left: 10%;*/
         width: 25%;
         height: 100%;
     }
@@ -373,25 +336,6 @@ html, body {
         width: 24%;
         /*margin-right: 0.5%;*/
         /*margin-left: 0.5%;*/
-    }
-    /* 預設，上面要改 */
-    .portfolio .work .workInner_0 {
-        background-position: right;
-    }
-    .portfolio .work .workInner_1 {
-        background-position: 40%;
-    }
-    .portfolio .work .workInner_2 {
-        background-position: 90%;
-    }
-    .portfolio .work .workInner_3 {
-        background-position: 20%;
-    }
-    .portfolio .work .workInner_4, .portfolio .work .workInner_5, .portfolio .work .workInner_6 {
-        background-position: left;
-    }
-    .portfolio .work .workInner_11 {
-        background-position: top;
     }
 }
 @media screen and (max-width: 981px) {
