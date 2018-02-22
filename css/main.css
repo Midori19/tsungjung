@@ -84,7 +84,7 @@ html, body {
         top: 32%;
         left: 50%;
         font-size: 1.5rem;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem;
         white-space: nowrap;
     }
     .info .container .infoContent:nth-child(2) {
@@ -139,16 +139,16 @@ html, body {
             animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .info .container .infoContent.rb:nth-child(2) span {
-            animation: show 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+            animation: show 1.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .info .container .infoContent.rb:nth-child(3) span {
-            animation: show 2.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+            animation: show 2.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .info .container .infoContent.rb:nth-child(4) span {
-            animation: show 3.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+            animation: show 2.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .info .container .infoContent.rb:nth-child(5) span {
-            animation: show 3.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+            animation: show 3.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
         }
         .rb::after {
             content: "";
@@ -438,11 +438,5 @@ html, body {
     .info > .infoImg {
         top: 30%;
         width: 80%;
-    }
-}
-
-@media screen and (min-width: 1281px) {
-    .info .container > .infoContent {
-        right: 15%
     }
 }
