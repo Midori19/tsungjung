@@ -23,11 +23,13 @@ $(function() {
     // 在 works 下面增加 work 類別
     function addWorks() {
         for (let i = 0; i <= 15; i++) {
-            let workHtml = '<div class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></div>'
+            let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
+            let workHtml = '<a href="#lightbox_' + i + '" class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
             if (i >= 12) {
-                workHtml = '<div class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></div>'
+                workHtml = '<a href="#lightbox_' + i + '" class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
             }
             $('.works').append(workHtml)
+            $('body').append(lightboxHtml)
         }
     }
     addWorks()

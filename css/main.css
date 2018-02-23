@@ -319,8 +319,75 @@ html, body {
     }
         .footer .footerLink a:hover {
             font-size: 2.5rem;
-            color: #90DFE5;/*E29EB7*/
+            color: #949487;/*E29EB7*/
         }
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    overflow: hidden;
+}
+    .lightbox img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 0%;
+        max-height: 0%;
+        transition: all 0.5s ease-in-out;
+    }
+    .lightbox:target {
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+    }
+    .lightbox:target img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .lightbox:target .lightboxClose {
+        top: 3rem;
+    }
+
+.lightboxClose {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+    transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+    .lightboxClose::before, .lightboxClose::after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 3px;
+        background-color: #FFF;
+        position: absolute;
+        left: 24px;
+        top: 10px;
+        transform: rotate(45deg);
+    }
+    .lightboxClose:after {
+        transform: rotate(-45deg);
+    }
 
 @keyframes slideBox {
     0% {
@@ -364,7 +431,7 @@ html, body {
 @media screen and (max-width: 1281px) {
     .bg span {
         font-size: 40rem;
-        bottom: -25%;
+        bottom: -9rem;
         left: 315%;
     }
     .header {
