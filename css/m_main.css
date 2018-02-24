@@ -462,6 +462,9 @@ html, body {
     }
 }
 @media screen and (max-width: 981px) {
+    .bg span {
+        left: 400%;
+    }
     .header {
         -webkit-background-size: 256px cover;
         background-size: 256px cover;
