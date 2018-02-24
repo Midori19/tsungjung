@@ -31,7 +31,9 @@ html, body {
 
 .header {
     position: relative;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    /*width: 100vw;*/
     height: 100%;
     margin-bottom: 10rem;
     overflow: hidden;
