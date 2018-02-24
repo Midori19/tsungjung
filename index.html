@@ -8,6 +8,7 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="reset/reset.css">
     <link rel="stylesheet" href="css/load.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <script type="text/javascript">
     setInterval ("running()", 10)
@@ -18,15 +19,22 @@
     if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
         // console.log(navigator.userAgent)
         // window.location.href ="p_index.html"
-        $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+        // $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+        var cookieVal = 'mobile'
+        document.cookie = "device = " + escape(cookieVal)
     } else if (/(Android)/i.test(navigator.userAgent)) {
         // console.log(navigator.userAgent)
         // window.location.href ="p_index.html"
-        $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+        // $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+        var cookieVal = 'mobile'
+        document.cookie = "device = " + escape(cookieVal)
     } else {
         // window.location.href ="index.html"
-        $('head').append('<link rel="stylesheet" href="css/main.css">')
+        // $('head').append('<link rel="stylesheet" href="css/main.css">')
+        document.cookie = "device = web"
     };
+
+    console.log(document.cookie)
 
     //判斷是否移動端
     // var browser={
