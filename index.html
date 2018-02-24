@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>LIU, TSUNG JUNG</title>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Paytone+One|Comfortaa|Fredericka+the+Great" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="reset/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+
+    <script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        // console.log(navigator.userAgent)
+        // window.location.href ="p_index.html"
+        $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+    } else if (/(Android)/i.test(navigator.userAgent)) {
+        // console.log(navigator.userAgent)
+        // window.location.href ="p_index.html"
+        $('head').append('<link rel="stylesheet" href="css/m_main.css">')
+    } else {
+        // window.location.href ="index.html"
+        $('head').append('<link rel="stylesheet" href="css/main.css">')
+    };
+
+    //判斷是否移動端
+    // var browser={
+    //     versions:function(){
+    //         var u = navigator.userAgent, app = navigator.appVersion;
+    //         return {
+    //             trident: u.indexOf('Trident') > -1, //IE
+    //             presto: u.indexOf('Presto') > -1, //opera
+    //             webKit: u.indexOf('AppleWebKit') > -1, //apple、google
+    //             gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,//firefox
+    //             mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否為移動端
+    //             ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios
+    //             android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android
+    //             iPhone: u.indexOf('iPhone') > -1 , //是否為iPhone
+    //             iPad: u.indexOf('iPad') > -1, //是否iPad
+    //             webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+    //         };
+    //     }(),
+    //     language:(navigator.browserLanguage || navigator.language).toLowerCase()
+    // }
+    </script>
 </head>
 <body>
     <div class="bg">
@@ -62,7 +98,6 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

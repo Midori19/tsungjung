@@ -1,0 +1,515 @@
+* {
+    position: relative;
+    font-family: 'Paytone One', 'Comfortaa', 'Fredericka the Great', '微軟正黑體';
+    user-select: none;
+}
+html, body {
+    height: 100%;
+}
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+    .bg span {
+        font-size: 52rem;
+        letter-spacing: 2rem;
+        position: absolute;
+        bottom: -13rem;
+        left: 340%;
+        transform: translateX(-50%);
+        transition: all ease-out .3s;
+        white-space: nowrap;
+        color: #E29EB7;
+    }
+    .bg .windowshow {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 2rem;
+    }
+
+.header {
+    position: relative;
+    height: 100%;
+    margin-bottom: 10rem;
+    overflow: hidden;
+    background-image: url(../images/header.jpg);
+    background-position: center;
+    opacity: 0.98;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+    .header .slideImg {
+        float: left;
+        font-size: 0;
+        width: 33.333333%;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-image: url(../images/header.jpg);
+        background-position: center center;
+        transform: translateX(30%);
+        animation: headSlide 2000ms 1 linear forwards;
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
+    }
+    .header .slideImg::after {
+        content: "";
+        clear: both;
+    }
+    .header .slideImg.headOne {
+        background-position: -16%;
+    }
+    .header .slideImg.headTwo {
+        transform: translateX(20%);
+        animation: headSlide 1800ms 1 linear forwards;
+    }
+    .header .slideImg.headThree {
+        transform: translateX(10%);
+        background-position: 116%;
+        animation: headSlide 1600ms 1 linear forwards;
+    }
+
+.info {
+    height: 100%;
+    margin-bottom: 10rem;
+}
+    .info .container {
+        height: 100%;
+    }
+    .info .container > .infoContent {
+        display: inline-block;
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+    .info .container .infoContent:nth-child(2) {
+        top: 39%;
+    }
+    .info .container .infoContent:nth-child(3) {
+        top: 46%;
+    }
+    .info .container .infoContent:nth-child(4) {
+        top: 53%;
+    }
+    .info .container .infoContent:nth-child(5) {
+        top: 60%;
+    }
+    .info .container .rb:nth-child(2)::after {
+        animation-delay: 0.3s;
+    }
+    .info .container .rb:nth-child(3)::after {
+        animation-delay: 0.6s;
+    }
+    .info .container .rb:nth-child(4)::after {
+        animation-delay: 0.9s;
+    }
+    .info .container .rb:nth-child(5)::after {
+        animation-delay: 1.2s;
+    }
+    .info .container .infoContent span {
+        opacity: 0;
+        letter-spacing: 0.05rem;
+    }
+    .info > .infoImg {
+        position: absolute;
+        top: 0;
+        width: 25%;
+        height: 100%;
+        left: 20%;
+        opacity: 0.95;
+    }
+        .info > .infoImg .img {
+            background-image: url(../images/infoimg.jpg);
+            width: 100%;
+            height: 100%;
+            background-position: left center;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+
+    .rb {
+        overflow: hidden;
+    }
+        .rb span {
+            animation: show 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .info .container .infoContent.rb:nth-child(2) span {
+            animation: show 1.6s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .info .container .infoContent.rb:nth-child(3) span {
+            animation: show 2.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .info .container .infoContent.rb:nth-child(4) span {
+            animation: show 2.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .info .container .infoContent.rb:nth-child(5) span {
+            animation: show 3.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+        .rb::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #DD3742;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: slideBox 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 both;
+        }
+
+.art {
+    margin-bottom: 10rem;
+    width: 100%;
+}
+    .art .artContent {
+        position: relative;
+        margin: auto;        
+        width: 30%;
+        font-weight: 900;
+        text-align: center;
+    }
+
+.portfolio {
+    width: 100%;
+    /*height: 100%;*/
+    display: table;
+    margin-bottom: 10rem;
+    position: relative;
+}
+    .portfolio::after {
+        content: '';
+        clear: both;
+    }
+    .portfolio .waveBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+        .portfolio .waveBox .wave {
+            position: absolute;
+            left: 0;
+            width: 110vw;
+            height: 110vw;
+            border-radius: 40%;
+            background-color: #FF6889;
+            margin-top: -50px;
+            margin-left: -300px;
+            transition: left 2s;
+            opacity: 0.5;
+            animation: drift 3000ms infinite linear;
+        }
+            .portfolio .wave.waveTwo {
+                background-color: #FAE3D9;
+                animation: drift 5000ms infinite linear;
+                opacity: 0.7;
+            }
+            .portfolio .wave.waveThree {
+                animation: drift 3500ms infinite linear;
+            }
+    .portfolio .works {
+        width: 80%;
+        margin: auto;
+    }
+    .portfolio .work {
+        width: 24%;
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+        .portfolio .work .workInner {
+            padding-top: 50%;
+            padding-bottom: 50%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1);
+        }
+        .portfolio .work .workInner:hover {
+            transform: scale(1.2);
+        }
+        .portfolio .work .workInner_0 {
+            background-position: right;
+        }
+        .portfolio .work .workInner_1 {
+            background-position: 40%;
+        }
+        .portfolio .work .workInner_2 {
+            background-position: 90%;
+        }
+        .portfolio .work .workInner_3 {
+            background-position: 20%;
+        }
+        .portfolio .work .workInner_4, .portfolio .work .workInner_5, .portfolio .work .workInner_6 {
+            background-position: left;
+        }
+        .portfolio .work .workInner_11 {
+            background-position: top;
+        }
+        .portfolio .work .workInner_14 {
+            background-position: right;
+        }
+        /* 取消 margin-bottom */
+        .portfolio .work.noneMB {
+            margin-bottom: 0;
+        }
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/12.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 0.95;
+}
+    .footer .footerWrap {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .footer .footerWrap div span {
+        color: rgba(255,255,255,0.8);
+        font-size: 1.5rem;
+        font-family: 'Comfortaa';
+        letter-spacing: 0.2rem;
+    }
+    .footer .footerWrap .email {
+        margin-top: 1rem;
+    }
+    .footer .footerWrap .email span{
+
+        font-size: 1rem;
+    }
+    .footer .footerLink {
+        margin-top: 1rem;
+    }
+    .footer .footerLink a {
+        position: absolute;
+        color: rgba(255,255,255,0.8);
+        font-size: 2rem;
+        padding: 2rem;
+        transition: all ease-out 0.1s;
+    }
+    .footer .footerLink i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .footer .footerLink .aOne {
+        transform: translateX(-100%);
+    }
+        .footer .footerLink a:hover {
+            font-size: 2.5rem;
+            color: #949487;/*E29EB7*/
+        }
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    overflow: hidden;
+}
+    .lightbox img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 0%;
+        max-height: 0%;
+        transition: all 0.5s ease-in-out;
+    }
+    .lightbox:target {
+        opacity: 1;
+        top: 0;
+        bottom: 0;
+    }
+    .lightbox:target img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .lightbox:target .lightboxClose {
+        top: 3rem;
+    }
+
+.lightboxClose {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+    transition: all 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+    .lightboxClose::before, .lightboxClose::after {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 3px;
+        background-color: #FFF;
+        position: absolute;
+        left: 24px;
+        top: 10px;
+        transform: rotate(45deg);
+    }
+    .lightboxClose:after {
+        transform: rotate(-45deg);
+    }
+
+@keyframes slideBox {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(101%);
+        animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+}
+@keyframes show {
+    0%, 50% {
+        opacity: 0;
+    }
+    51%, 100% {
+        opacity: 1;
+    }
+}
+/* header slide */
+@keyframes headSlide {
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .bg span {
+        font-size: 40rem;
+        bottom: -9rem;
+        left: 315%;
+    }
+    .header {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .header .slideImg.headOne {
+        background-position: 14.7%;
+    }
+    .header .slideImg.headThree {
+        background-position: 84.7%;
+    }
+    .info .container > .infoContent {
+        left: 50%;
+    }
+    .info > .infoImg {
+        width: 25%;
+        height: 100%;
+    }
+    .portfolio .waveBox .wave {
+        margin-left: -200px;
+    }
+    .portfolio .work {
+        width: 24%;
+        margin-right: 0.5%;
+        margin-left: 0.5%;
+    }
+    /* 預設，上面要改 */
+    .portfolio .work .workInner_0 {
+        background-position: right;
+    }
+    .portfolio .work .workInner_1 {
+        background-position: 40%;
+    }
+    .portfolio .work .workInner_2 {
+        background-position: 90%;
+    }
+    .portfolio .work .workInner_3 {
+        background-position: 20%;
+    }
+    .portfolio .work .workInner_4, .portfolio .work .workInner_5, .portfolio .work .workInner_6 {
+        background-position: left;
+    }
+    .portfolio .work .workInner_11 {
+        background-position: top;
+    }
+}
+@media screen and (max-width: 981px) {
+    .header {
+        -webkit-background-size: 256px cover;
+        background-size: 256px cover;
+    }
+    .header > .slideImg {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 765px) {
+    .bg span {
+        left: 200%;
+        bottom: -1rem;
+    }
+    .header {
+        margin-bottom: 5rem;
+    }
+    .header .slideImg.headOne {
+        background-position: 15.4%;
+    }
+    .header .slideImg.headThree {
+        background-position: 85%;
+    }
+    .portfolio .works .work {
+        width: 100%;
+    }
+    .info > .infoImg {
+        top: 30%;
+        width: 80%;
+    }
+}
