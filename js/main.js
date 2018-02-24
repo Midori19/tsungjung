@@ -25,9 +25,9 @@ $(function() {
         for (let i = 0; i <= 15; i++) {
             let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
             let workHtml = '<a href="#lightbox_' + i + '" class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
-            if (i >= 12) {
-                workHtml = '<a href="#lightbox_' + i + '" class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
-            }
+            // if (i >= 12) {
+            //     workHtml = '<a href="#lightbox_' + i + '" class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
+            // }
             $('.works').append(workHtml)
             $('body').append(lightboxHtml)
         }

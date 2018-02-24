@@ -52,8 +52,8 @@ html, body {
         background-position: center center;
         transform: translateX(30%);
         animation: headSlide 2000ms 1 linear forwards;
-        /*-webkit-background-size: cover;*/
-        /*background-size: cover;*/
+        -webkit-background-size: cover;
+        background-size: cover;
     }
     .header .slideImg::after {
         content: "";
@@ -177,7 +177,7 @@ html, body {
 
 .portfolio {
     width: 100%;
-    /*height: 100%;*/
+    height: auto;
     display: table;
     margin-bottom: 10rem;
     position: relative;
@@ -220,7 +220,7 @@ html, body {
         margin: auto;
     }
     .portfolio .work {
-        width: 24%;
+        width: 49%;
         float: left;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -456,28 +456,9 @@ html, body {
         margin-left: -200px;
     }
     .portfolio .work {
-        width: 24%;
+        width: 49%;
         margin-right: 0.5%;
         margin-left: 0.5%;
-    }
-    /* 預設，上面要改 */
-    .portfolio .work .workInner_0 {
-        background-position: right;
-    }
-    .portfolio .work .workInner_1 {
-        background-position: 40%;
-    }
-    .portfolio .work .workInner_2 {
-        background-position: 90%;
-    }
-    .portfolio .work .workInner_3 {
-        background-position: 20%;
-    }
-    .portfolio .work .workInner_4, .portfolio .work .workInner_5, .portfolio .work .workInner_6 {
-        background-position: left;
-    }
-    .portfolio .work .workInner_11 {
-        background-position: top;
     }
 }
 @media screen and (max-width: 981px) {
