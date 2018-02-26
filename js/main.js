@@ -33,4 +33,14 @@ $(function() {
         }
     }
     addWorks()
+    
+    // menu
+    $('.menuButton').click(function() {
+        $('.menu').toggleClass('trans')
+        $('.menuButton').toggleClass('opac')
+    })
+    $('.menu').click(function() {
+        $('.menu').toggleClass('trans')
+        $('.menuButton').toggleClass('opac')
+    })
 })

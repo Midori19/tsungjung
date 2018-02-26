@@ -488,6 +488,12 @@ html, body {
         -webkit-background-size: cover;
         background-size: cover;
     }
+    .info .container > .infoContent {
+        font-size: 1.2rem;
+    }
+    .art .artContent {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 765px) {
     .bg span {
@@ -506,8 +512,78 @@ html, body {
     .portfolio .works .work {
         width: 100%;
     }
-    .info > .infoImg {
+/*    .info > .infoImg {
         top: 30%;
+        left: 0;
         width: 80%;
+    }*/
+    .info .container > .infoContent {
+        font-size: 1rem;
+    }
+}
+
+/* menu */
+.menuButton {
+    z-index: 2;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.1);
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+.menu {
+    z-index: 2;
+    position: fixed;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: ease-in-out 0.3s;
+}
+.menu a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+.menu a li {
+    list-style: none;
+    padding: 1rem;
+    margin: 0.1rem;
+    font-size: 3rem;
+    transform: translateX(100%);
+    /*background-color: #949487;*/
+}
+.menu.trans {
+    transform: translateX(0);
+}
+.menu.trans a li {
+    /*transform: translateX(0);*/
+    animation: slideMenu 1s cubic-bezier(0.22, 0.61, 0.36, 1) 1 both;
+}
+.menu.trans a:nth-child(2) li {
+    animation-delay: 0.2s;
+}
+.menu.trans a:nth-child(3) li {
+    animation-delay: 0.4s;
+}
+.opac {
+    opacity: 0;
+}
+
+@keyframes slideMenu {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
