@@ -11,7 +11,7 @@ $(function() {
         const sliderCont = 50 + (50 * (winScroll / $('.bg').height()))
         $('.bg > span').css('transform','translateX(-' + sliderCont + '%)')
 
-        if (winScroll > $('.info').offset().top - 300) {
+        if (winScroll > $('.info').offset().top - ($('.info').offset().top/2)) {
             $('.infoContent').addClass('rb')
         }
 
@@ -23,8 +23,8 @@ $(function() {
     // 在 works 下面增加 work 類別
     function addWorks() {
         for (let i = 0; i <= 15; i++) {
-            let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
             let workHtml = '<a href="#lightbox_' + i + '" class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
+            let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
             // if (i >= 12) {
             //     workHtml = '<a href="#lightbox_' + i + '" class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
             // }

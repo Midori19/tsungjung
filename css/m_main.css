@@ -75,20 +75,30 @@ html, body {
 .info {
     height: 100%;
     margin-bottom: 10rem;
+
+    /* 0226 */
+    padding-bottom: 5rem;
+    /* 0226 end */
 }
     .info .container {
-        height: 100%;
+        /* 0226 */
+        /*height: 100%;*/
+        /* 0226 end */
     }
     .info .container > .infoContent {
         display: inline-block;
-        position: absolute;
-        top: 32%;
-        left: 50%;
         font-size: 1.5rem;
         padding: 0.5rem;
         white-space: nowrap;
+
+        /* 0226 */
+        /*position: absolute;*/
+        /*top: 32%;*/
+        /*left: 50%;*/
+        margin: 0 10rem;
+        /* 0226 end */
     }
-    .info .container .infoContent:nth-child(2) {
+    /*.info .container .infoContent:nth-child(2) {
         top: 39%;
     }
     .info .container .infoContent:nth-child(3) {
@@ -99,7 +109,7 @@ html, body {
     }
     .info .container .infoContent:nth-child(5) {
         top: 60%;
-    }
+    }*/
     .info .container .rb:nth-child(2)::after {
         animation-delay: 0.3s;
     }
@@ -117,12 +127,21 @@ html, body {
         letter-spacing: 0.05rem;
     }
     .info > .infoImg {
-        position: absolute;
         top: 0;
-        width: 25%;
-        height: 100%;
-        left: 20%;
         opacity: 0.95;
+
+        /* 0226 */
+        /*position: absolute;*/
+        /*height: 100%;*/
+        /*width: 25%;*/
+        /*left: 20%;*/
+        position: relative;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10rem 0;
+        /* 0226 end */
     }
         .info > .infoImg .img {
             background-image: url(../images/infoimg.jpg);
@@ -166,13 +185,22 @@ html, body {
 .art {
     margin-bottom: 10rem;
     width: 100%;
+
+    /* 0226 */
+    margin: 10rem 0;
+    /* 0226 end*/
 }
     .art .artContent {
         position: relative;
         margin: auto;        
-        width: 30%;
         font-weight: 900;
         text-align: center;
+
+        /* 0226 */
+        /*width: 30%;*/
+        width: 70%;
+        font-size: 1.5rem;
+        /* 0226 end*/
     }
 
 .portfolio {
@@ -446,10 +474,14 @@ html, body {
         background-position: 84.7%;
     }
     .info .container > .infoContent {
-        left: 50%;
+        /* 0226 */
+        /*left: 50%;*/
+        /* 0226 end*/
     }
     .info > .infoImg {
-        width: 25%;
+        /* 0226 */
+        /*width: 25%;*/
+        /* 0226 end */
         height: 100%;
     }
     .portfolio .waveBox .wave {
@@ -492,7 +524,11 @@ html, body {
         width: 100%;
     }
     .info > .infoImg {
-        top: 30%;
-        width: 80%;
+        /* 0226 */
+        /*top: 30%;*/
+        /*width: 80%;*/
+        top: ;
+        width: 100%;
+        /* 0226 end */
     }
 }
