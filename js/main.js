@@ -21,8 +21,8 @@ $(function() {
     })
 
     // 在 works 下面增加 work 類別
-    function addWorks() {
-        for (let i = 0; i <= 15; i++) {
+    function addWorks(num) {
+        for (let i = 0; i <= num; i++) {
             let workHtml = '<a href="#lightbox_' + i + '" class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
             let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
             // if (i >= 12) {
@@ -32,7 +32,15 @@ $(function() {
             $('body').append(lightboxHtml)
         }
     }
-    addWorks()
+
+    // 在移動端或桌上型電腦時分別增加幾個 work
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        addWorks(7)
+    } else if (/(Android)/i.test(navigator.userAgent)) {
+        addWorks(7)
+    } else {
+        addWorks(15)
+    }
     
     // menu
     $('.menuButton').click(function() {
