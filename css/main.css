@@ -281,9 +281,9 @@ html, body {
     opacity: 0.95;
 }
     .footer .footerWrap {
-        top: 2.5%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
         text-align: center;
     }
     .footer .footerWrap div span {
@@ -644,5 +644,9 @@ html, body {
     }
     .menu a li {
         font-size: 1rem;
+    }
+    .footer .footerWrap {
+        top: 2.5%;
+        transform: translate(-50%,0%);
     }
 }
