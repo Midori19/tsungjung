@@ -603,6 +603,7 @@ html, body {
         overflow: hidden;
     }
     .header {
+        background-attachment: initial;
         -webkit-background-size: cover;
         background-size: cover;
     }
