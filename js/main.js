@@ -24,7 +24,7 @@ $(function() {
     function addWorks(num) {
         for (let i = 0; i <= num; i++) {
             let workHtml = '<a href="#lightbox_' + i + '" class="work"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
-            let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#workInner' + i +'"></a></div>'
+            let lightboxHtml = '<div class="lightbox" id="lightbox_' + i +'"><img src="images/' + i + '.jpg"><a class="lightboxClose" href="#_"></a></div>'
             // if (i >= 12) {
             //     workHtml = '<a href="#lightbox_' + i + '" class="work noneMB"><div class="workInner workInner_' + i + '" style="background-image: url(images/' + i + '.jpg);"></div></a>'
             // }
