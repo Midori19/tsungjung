@@ -22,12 +22,6 @@ html, body {
         white-space: nowrap;
         color: #E29EB7;
     }
-    .bg .windowshow {
-        position: absolute;
-        right: 1rem;
-        bottom: 1rem;
-        font-size: 2rem;
-    }
 
 .header {
     position: relative;
@@ -331,6 +325,7 @@ html, body {
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     overflow: hidden;
+    z-index: 3;
 }
     .lightbox img {
         margin: auto;
@@ -368,7 +363,7 @@ html, body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.3);
     border-radius: 50%;
     position: absolute;
     top: 5rem;
@@ -397,12 +392,36 @@ html, body {
     position: fixed;
     top: 0.5rem;
     right: 0.5rem;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0,0,0,0.1);
+    width: 60px;
+    height: 60px;
     transition: ease-in-out 0.5s;
     cursor: pointer;
 }
+    .menuButton > .menuLine {
+        width: 60%;
+        height: 0.2rem;
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate(0%,-50%);
+        transition: all cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+        background-color: rgba(0,0,0,0.8);
+    }
+    .menuLine:nth-child(1) {
+        top: 25%;
+    }
+    .menuLine:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+    .menuLine:nth-child(3) {
+        top: 75%;
+    }
+    .menuButton:hover .menuLine:nth-child(2) {
+        width: 40%;
+    }
+    .menuButton:hover .menuLine:nth-child(3) {
+        width: 25%;
+    }
 .menu {
     z-index: 2;
     position: fixed;
@@ -648,5 +667,14 @@ html, body {
     .footer .footerWrap {
         top: 2.5%;
         transform: translate(-50%,0%);
+    }
+    .footer .footerWrap div span {
+        font-size: 1.16rem;
+    }
+    .footer .footerWrap .email span {
+        font-size: 0.7rem;
+    }
+    .footer .footerLink a {
+        font-size: 1.5rem;
     }
 }
