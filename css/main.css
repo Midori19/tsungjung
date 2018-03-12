@@ -32,6 +32,8 @@ html, body {
     background-position: center;
     opacity: 0.98;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
     .header .slideImg {
         float: left;
